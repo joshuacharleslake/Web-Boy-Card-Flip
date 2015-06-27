@@ -8,9 +8,9 @@
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 <style>
 .wrapper { padding: 10px; width: 100%; max-width: 960px; margin: 0 auto; }
-.flip-container { perspective: 1000; margin: 10px; }
+.flip-container { perspective: 1000; margin: 10px; height: 250px; }
 .flip-container:hover .flipper, .flip-container.hover .flipper { transform: rotateY(180deg); }
-.flip-container, .front, .back { width: 100%; height:245px; }
+.flip-container, .front, .back { width: 100%; }
 .flipper { transition: 0.9s; transform-style: preserve-3d; position: relative; }
 .front, .back { backface-visibility: hidden; position: absolute; top: 0; left: 0; margin: 3%px; }
 .front { background: #ccc; }
@@ -30,68 +30,97 @@
 			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-				<img src="http://media.pocketmonsters.net/imageboard/30/12596622370052.jpg" />
-			
+				<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div>
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
 			<div class="front">
-			F2
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-			B2
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div>
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
 			<div class="front">
-			F3
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-			B3
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div>
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
 			<div class="front">
-			F4
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-			B4
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div>
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
 			<div class="front">
-			F5
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-			B5
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div>
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
 			<div class="front">
-			F6
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-			B6
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div>
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
 			<div class="front">
-			FRONT 7
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 			<div class="back">
-			BACK 7
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			</div>
+		</div>
+	</div> 
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			</div>
+			<div class="back">
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			</div>
+		</div>
+	</div> 
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			</div>
+			<div class="back">
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			</div>
+		</div>
+	</div> 
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			</div>
+			<div class="back">
+			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
 			</div>
 		</div>
 	</div> 
@@ -99,15 +128,42 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $('.team-card-wrap').slick({
-  	dots: true,
-    slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  accessibility: true,
-  arrows: true,
+  dots: true,
+  arrows: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+	});
   });
-});		
 </script>
 </main>
 </body>
