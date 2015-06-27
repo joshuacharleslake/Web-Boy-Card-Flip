@@ -28,6 +28,7 @@
 		<div class="flipper">
 			<div class="front">
 			<img src="http://viper-fox.com/card/1998J/s01.jpg" />
+			<div></div>
 			</div>
 			<div class="back">
 				<img src="http://viper-fox.com/card/1998J/s01.jpg" />
@@ -130,16 +131,17 @@ $(document).ready(function(){
   $('.team-card-wrap').slick({
   dots: true,
   arrows: false,
-  infinite: false,
+  autoplay: true,
+  infinite: true,
   speed: 300,
   slidesToShow: 5,
-  slidesToScroll: 5,
+  slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
       }
@@ -148,7 +150,7 @@ $(document).ready(function(){
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     },
     {
@@ -158,9 +160,6 @@ $(document).ready(function(){
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 	});
   });
